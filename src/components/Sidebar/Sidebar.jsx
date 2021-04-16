@@ -40,7 +40,7 @@ const Sidebar = (props) => {
                     }}
                   />
 
-                  {index + 1 === data?.allPeople?.people.length && (
+                  {/* {index + 1 === data?.allPeople?.people.length && (
                     <Waypoint
                       onEnter={() => {
                         const endCursor = data?.allPeople?.pageInfo?.endCursor;
@@ -58,11 +58,11 @@ const Sidebar = (props) => {
                         }
                       }}
                     />
-                  )}
+                  )} */}
                 </Fragment>
               );
             })}
-          <Loader loading={loading} />
+          <Loader loading={true} />
         </Fail>
       </Box>
       <Box className={styles.sidebar_content_wrapper}>
