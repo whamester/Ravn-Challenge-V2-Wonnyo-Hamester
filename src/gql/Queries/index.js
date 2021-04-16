@@ -6,6 +6,12 @@ export const ALL_PEOPLE = gql`
       people {
         id
         name
+        homeworld {
+          name
+        }
+        species {
+          name
+        }
       }
       pageInfo {
         hasNextPage

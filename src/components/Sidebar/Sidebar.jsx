@@ -29,11 +29,12 @@ const Sidebar = (props) => {
           {Array.isArray(data?.allPeople?.people) &&
             data?.allPeople?.people.map((person, index) => {
               return (
-                <Fragment key={person.id}>
+                <Fragment key={index}>
                   <ListItem
-                    key={person.id}
                     name={person.name}
-                    description={person.name}
+                    description={`${person?.species?.name || "Human"}  from ${
+                      person?.homeworld?.name || ""
+                    }`}
                     onClick={() => {
                       push(`/detail/${person.id}`);
                     }}
