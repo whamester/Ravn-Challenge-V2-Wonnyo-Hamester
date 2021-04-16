@@ -47,6 +47,8 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 
 ## Description
 
+![image](https://user-images.githubusercontent.com/57273227/114982443-b1a4c200-9e4c-11eb-9ae3-35d2b3bc931c.png)
+
 Single web site to display Star Wars Character list and to get the details of each character.
 
 - List of character with name, homeworld and species
