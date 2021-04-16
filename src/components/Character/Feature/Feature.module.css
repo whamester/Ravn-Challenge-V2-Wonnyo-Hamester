@@ -1,0 +1,12 @@
+.feature_title {
+  padding: 15px;
+  color: #828282;
+  font-weight: bold;
+  font-size: 17px;
+}
+
+.feature_value {
+  padding: 15px;
+  font-weight: bold;
+  font-size: 17px;
+}
