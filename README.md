@@ -70,6 +70,7 @@ Single web site to display Star Wars Character list and to get the details of ea
 ### Additional Information
 
 Leave the firebase hosting here: https://star-wars-d5184.web.app/
+Develop branch was used as feature branch and merged into master 
 
 ## Technologies used
 
