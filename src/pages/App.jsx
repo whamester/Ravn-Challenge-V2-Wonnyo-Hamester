@@ -3,12 +3,12 @@ import Detail from "../components/Character/Detail";
 import Header from "../components/Header";
 import Sidebar from "../components/Sidebar";
 import Home from "./Home";
+import themeConfig from "../style/theme";
 
 import { BrowserRouter as Router, Route } from "react-router-dom";
 
 import { extendTheme } from "@chakra-ui/react";
 import { ChakraProvider } from "@chakra-ui/react";
-import themeConfig from "../style/theme";
 
 const theme = extendTheme(themeConfig);
 

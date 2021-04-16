@@ -64,7 +64,7 @@ const Sidebar = (props) => {
           <Loader loading={loading} />
         </Fail>
       </Box>
-      <Box w="100%">
+      <Box className={styles.sidebar_content_wrapper}>
         <Box p={5} ml={distribution} className={styles.sidebar_content}>
           {children}
         </Box>

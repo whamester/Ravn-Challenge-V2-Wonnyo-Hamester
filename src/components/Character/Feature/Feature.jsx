@@ -1,7 +1,9 @@
-import { Flex } from "@chakra-ui/layout";
-import style from "./Feature.module.css";
 import React from "react";
+
+import { Flex } from "@chakra-ui/layout";
 import { Title } from "../../Typography";
+
+import style from "./Feature.module.css";
 
 const Feature = ({ title, value }) => {
   return (

@@ -8,6 +8,9 @@
 }
 
 .sidebar_content {
-  background-color: white;
   min-height: 100vh;
+}
+
+.sidebar_content_wrapper {
+  width: 100%;
 }
