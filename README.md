@@ -1,6 +1,12 @@
-# Getting Started with Create React App
+# RAVN CHALLENGE V2 - WONNTO SELMIRA HAMESTER
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Setup
+
+Clone the repository and move inside the root and run the following commands
+
+yarn install
+
+yanr start
 
 ## Available Scripts
 
@@ -39,32 +45,27 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+## Description
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Single web site to display Star Wars Character list and to get the details of each character.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+- List of character with name, homeworld and species
+- Detail of the character selected from the list
+  - Eye color
+  - Hair color
+  - Skin color
+  - Birth year
+  - List of Vehicle
 
-### Code Splitting
+### Additional Information
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Leave the firebase hosting here:
 
-### Analyzing the Bundle Size
+## Technologies used
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Technical test developed with the following technologies
 
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- ReactJS
+- GraphQL
+- Apollo
+- ChakraUI
