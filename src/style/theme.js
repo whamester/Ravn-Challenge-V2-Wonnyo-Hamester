@@ -9,9 +9,9 @@ export default {
     },
   },
   fonts: {
-    body: "system-ui, sans-serif",
-    heading: "Georgia, serif",
-    mono: "Menlo, monospace",
+    body: "SF Pro Display, system-ui, sans-serif",
+    heading: "SF Pro Display, Georgia, serif",
+    mono: "SF Pro Display,Menlo, monospace",
   },
   fontSizes: {
     xs: "0.75rem",
