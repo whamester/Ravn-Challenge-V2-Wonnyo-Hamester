@@ -19,44 +19,45 @@ const Detail = () => {
 
   return (
     <Container>
-      <Loader loading={loading} />
-      <HandleFail error={error}>
-        <Title p={4}>General Information</Title>
-        {
-          <Fragment>
-            <Feature
-              title="Eye Color"
-              value={capitalize(data?.person?.eyeColor)}
-            />
-            <Divider />
-            <Feature
-              title="Hair Color"
-              value={capitalize(data?.person?.hairColor)}
-            />
-            <Divider />
-            <Feature
-              title="Skin Color"
-              value={capitalize(data?.person?.skinColor)}
-            />
-            <Divider />
-            <Feature title="Birth Year" value={data?.person?.birthYear} />
-            <Divider />
-
-            <Title p={4}>Vehicles</Title>
-
+      <Loader loading={loading}>
+        <HandleFail error={error}>
+          <Title p={4}>General Information</Title>
+          {
             <Fragment>
-              {Array.isArray(data?.person?.ships?.starships) &&
-                data?.person?.ships?.starships.map(({ name }, index) => (
-                  <Fragment key={index}>
-                    <Feature title={name} />
-                    <Divider />
-                  </Fragment>
-                ))}
+              <Feature
+                title="Eye Color"
+                value={capitalize(data?.person?.eyeColor)}
+              />
+              <Divider />
+              <Feature
+                title="Hair Color"
+                value={capitalize(data?.person?.hairColor)}
+              />
+              <Divider />
+              <Feature
+                title="Skin Color"
+                value={capitalize(data?.person?.skinColor)}
+              />
+              <Divider />
+              <Feature title="Birth Year" value={data?.person?.birthYear} />
+              <Divider />
+
+              <Title p={4}>Vehicles</Title>
+
+              <Fragment>
+                {Array.isArray(data?.person?.ships?.starships) &&
+                  data?.person?.ships?.starships.map(({ name }, index) => (
+                    <Fragment key={index}>
+                      <Feature title={name} />
+                      <Divider />
+                    </Fragment>
+                  ))}
+              </Fragment>
+              <Divider />
             </Fragment>
-            <Divider />
-          </Fragment>
-        }
-      </HandleFail>
+          }
+        </HandleFail>
+      </Loader>
     </Container>
   );
 };
