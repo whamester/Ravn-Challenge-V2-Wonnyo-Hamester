@@ -1,4 +1,4 @@
-import React, { Fragment } from "react";
+import React, { Fragment, useState } from "react";
 import Fail from "../HandleFail";
 import ListItem from "../ListItem";
 import Loader from "../Loader";
@@ -13,14 +13,46 @@ import styles from "./Sidebar.module.css";
 import { useHistory } from "react-router";
 
 const distribution = { base: 0, md: 250, lg: 300 };
+const loading_step = 5;
 
 const Sidebar = (props) => {
   const { children, ...rest } = props;
   const { push } = useHistory();
-
+  const [isLoadingMore, setLoadingMore] = useState(false);
   const { data, error, loading, fetchMore } = useQuery(ALL_PEOPLE, {
-    variables: { first: 5 },
+    variables: { first: loading_step },
   });
+
+  const handleWaypoint = (allPeopleData, fetchMorePeople, step) => {
+    const endCursor = allPeopleData?.allPeople?.pageInfo?.endCursor;
+    if (endCursor && fetchMorePeople) {
+      setLoadingMore(true);
+      fetchMorePeople({
+        variables: { first: step, after: endCursor },
+        updateQuery: (prev, { fetchMoreResult }) => {
+          setLoadingMore(false);
+          if (!fetchMoreResult) {
+            return prev;
+          }
+          fetchMoreResult.allPeople.people = [
+            ...prev.allPeople.people,
+            ...fetchMoreResult.allPeople.people,
+          ];
+          return fetchMoreResult;
+        },
+      });
+    }
+  };
+
+  const goToDetail = (person) => {
+    push(`/detail/${person.id}`);
+  };
+
+  const getPersonDescription = (person) => {
+    return `${person?.species?.name || "Human"}  from ${
+      person?.homeworld?.name || ""
+    }`;
+  };
 
   return (
     <Flex {...rest}>
@@ -32,39 +64,24 @@ const Sidebar = (props) => {
                 <Fragment key={index}>
                   <ListItem
                     name={person.name}
-                    description={`${person?.species?.name || "Human"}  from ${
-                      person?.homeworld?.name || ""
-                    }`}
-                    onClick={() => {
-                      push(`/detail/${person.id}`);
-                    }}
+                    description={getPersonDescription(person)}
+                    onClick={() => goToDetail(person)}
                   />
 
                   {index + 1 === data?.allPeople?.people.length && (
                     <Waypoint
-                      onEnter={() => {
-                        const endCursor = data?.allPeople?.pageInfo?.endCursor;
-                        if (endCursor && fetchMore) {
-                          fetchMore({
-                            variables: { first: 5, after: endCursor },
-                            updateQuery: (prev, { fetchMoreResult }) => {
-                              fetchMoreResult.allPeople.people = [
-                                ...prev.allPeople.people,
-                                ...fetchMoreResult.allPeople.people,
-                              ];
-                              return fetchMoreResult;
-                            },
-                          });
-                        }
-                      }}
+                      onEnter={() =>
+                        handleWaypoint(data, fetchMore, loading_step)
+                      }
                     />
                   )}
                 </Fragment>
               );
             })}
-          <Loader loading={loading} />
+          <Loader loading={loading || isLoadingMore} />
         </Fail>
       </Box>
+
       <Box className={styles.sidebar_content_wrapper}>
         <Box p={5} ml={distribution} className={styles.sidebar_content}>
           {children}
