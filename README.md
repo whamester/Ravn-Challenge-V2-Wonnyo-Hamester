@@ -1,6 +1,12 @@
-# Getting Started with Create React App
+# RAVN CHALLENGE V2 - WONNTO SELMIRA HAMESTER
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Setup
+
+Clone the repository and move inside the root and run the following commands
+
+yarn install
+
+yanr start
 
 ## Available Scripts
 
@@ -39,32 +45,40 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+## Description
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+![image](https://user-images.githubusercontent.com/57273227/114982443-b1a4c200-9e4c-11eb-9ae3-35d2b3bc931c.png)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+![image](https://user-images.githubusercontent.com/57273227/114982638-efa1e600-9e4c-11eb-984c-4ffc82a051f8.png)
 
-### Code Splitting
+![image](https://user-images.githubusercontent.com/57273227/114982690-00525c00-9e4d-11eb-9b24-8d367cafaeb6.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+![image](https://user-images.githubusercontent.com/57273227/114982838-2aa41980-9e4d-11eb-952c-f4fa2d819d7f.png)
 
-### Analyzing the Bundle Size
+![image](https://user-images.githubusercontent.com/57273227/114982951-4a3b4200-9e4d-11eb-8c5a-2043bc291e93.png)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Single web site to display Star Wars Character list and to get the details of each character.
 
-### Making a Progressive Web App
+- List of character with name, homeworld and species
+- Detail of the character selected from the list
+  - Eye color
+  - Hair color
+  - Skin color
+  - Birth year
+  - List of Vehicle
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+### Additional Information
 
-### Advanced Configuration
+Leave the firebase hosting here: https://star-wars-d5184.web.app/
+Develop branch was used as feature branch and merged into master 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+## Technologies used
 
-### Deployment
+Technical test developed with the following technologies
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+- ReactJS
+- GraphQL
+- Apollo
+- ChakraUI
 
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+# May the Force be with you
